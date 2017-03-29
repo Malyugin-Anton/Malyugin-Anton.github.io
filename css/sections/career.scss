@@ -1,0 +1,155 @@
+.career__left {
+  @include phones {
+    width: 100%;
+    clear: both;
+    margin-bottom: 20px;
+  }
+  width: 25%;
+  float: left;
+}
+
+.career__pic {
+  @include phones {
+    margin: 0 auto;
+  }
+  width: rem(220px);
+  height: rem(220px);
+  overflow: hidden;
+  @include border-radius(15px);
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.career__right {
+  @include  phones {
+    margin-left: 0;
+    width: 100%;
+    clear: both;
+  }
+  float: right;
+  width: 60%;
+}
+
+.career__item {
+  @include phones {
+    text-align: center;
+  }
+  text-align: right;
+  margin-bottom: rem(20px);
+  color: #858585;
+
+  &:first-child {
+    .career__block {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &:last-child {
+    .career__block {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.career__block {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  padding: 15px;
+  @include phones {
+    width: 80%;
+  }
+  width: 70%;
+  text-align: left;
+  @include border-radius(9px);
+  @include fira(light);
+  font-weight: bold;
+  cursor: pointer;
+
+  &:after, &:before {
+    @include phones {
+      display: none;
+    }
+    content: "";
+    display: block;
+    width: 1px;
+    background: #dddddd;
+    position: absolute;
+    left: -20px;
+  }
+
+  &:before {
+    top: 0;
+    bottom: 50%;
+    margin-bottom: 10px;
+  }
+
+  &:after {
+    bottom: rem(-20px);
+    top: 50%;
+    margin-top: 10px;
+  }
+}
+
+.career__block-active {
+  .career__block {
+    background: $blue;
+    color: #fff;
+  }
+
+  .carrer__title {
+    color: #fff;
+  }
+
+  .career_year {
+    color: $blue;
+    font-weight: bold;
+    font-size: 16px;
+
+    &:after {
+      border: 5px solid #94e0f2;
+      margin-top: -10px;
+      margin-left: 1px;
+    }
+  }
+}
+
+.carrer__title {
+  color: #5a5a5a;
+  font-size: 18px;
+  margin-bottom: rem(5px);
+}
+
+.career_year {
+  @include phones {
+    display: none;
+  }
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  line-height: rem(14px);
+  margin-top: rem(-7px);
+  margin-right: 30px;
+  font-size: 14px;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: $blue;
+    @include border-radius(50%);
+    left: 100%;
+    top: 50%;
+    margin-top: -5px;
+    margin-left: 6px;
+  }
+}

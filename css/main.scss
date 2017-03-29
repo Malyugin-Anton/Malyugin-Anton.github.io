@@ -1,0 +1,28 @@
+//adjustment variable
+$font-size: 16px;
+$body-font : 'fira_sansregular', Helvetica, serif;
+$footer-height: 50px;
+
+// vars
+$grey: #727272;
+$white: #f6f6f6;
+$blue: #33c1e3;
+$black: #414141;
+$red: #e85f61;
+
+// layout
+@import "_misc/fonts";
+@import "_misc/mixins"; 
+@import "_misc/normalize";
+@import "_misc/adjustment";
+@import "plugins/font-awesome";
+
+// styles
+@import "sections/header";
+@import "sections/content";
+@import "sections/about";
+@import "sections/career";
+@import "sections/auth";
+@import "sections/portfolio";
+@import "sections/skills";
+@import "sections/footer";

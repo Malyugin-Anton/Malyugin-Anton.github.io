@@ -1,0 +1,25 @@
+.footer {
+  @include phones {
+    text-align: center;
+    padding-top: 8px;
+  }
+  background: $black;
+  height: rem($footer-height);
+  margin-top: -$footer-height;
+}
+
+.footer__left {
+  height: rem($footer-height);
+
+  &:after {
+    content: "";
+    height: 100%;
+    @include inlineblock(middle);
+  }
+}
+.copyright {
+  display: inline-block;
+  color: #9c9c9c;
+  font-size: 14px;
+  @include fira(regular);
+}

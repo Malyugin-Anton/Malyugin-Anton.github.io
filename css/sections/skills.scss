@@ -1,0 +1,72 @@
+.skills__left {
+  @include phones {
+    width: 100%;
+    clear: both;
+    margin-bottom: 20px;
+  }
+  width: 25%;
+  float: left;
+}
+
+.skills__pic {
+  @include  phones {
+    margin: 0 auto;
+  }
+  @include tablets {
+    height: rem(180px);
+    width: rem(180px);
+  }
+  height: rem(220px);
+  width: rem(220px);
+  display: block;
+  color: #fff;
+  font-size: 100px;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.skills__right {
+  @include tablets {
+    width: 62%;
+  }
+  @include phones {
+    width: 100%;
+  }
+  width: 65%;
+  float: right;
+}
+
+.skills__list {
+  @include phones {
+    padding: 0 5px 15px 5px;
+  }
+}
+
+.skills__item {
+  position: relative;
+  padding: 10px 20px;
+  height: 20px;
+  @include fira(medium);
+  color: $grey;
+  margin-bottom: 5px;
+
+  &:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    @include border-radius(50%);
+    background: $blue;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    margin-right: -10px;
+  }
+}

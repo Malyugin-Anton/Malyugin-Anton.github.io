@@ -1,0 +1,115 @@
+.header {
+  background: #fff;
+  @include box-shadow(0 1px 3px rgba(00, 00, 00, .2));
+  padding: rem(8px) 0;
+  @extend %clearfix;
+  margin-bottom: rem(25px);
+}
+
+.header__left, .header__right {
+  float: left;
+  width: 50%;
+}
+
+.user__avatar {
+  @include inlineblock(middle);
+  @include border-radius(50%);
+  width: rem(60px);
+  height: rem(60px);
+  overflow: hidden;
+  border: 2px solid #bfbfbf;
+  margin-right: rem(20px);
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.user__username {
+  @include phones {
+    width: 40%;
+  }
+  @include inlineblock(middle);
+  @include fira(medium);
+  font-size: 18px;
+  color: $black;
+}
+
+.header__right {
+  text-align: right;
+  height: rem(64px);
+  &:after {
+    content: "";
+    @include inlineblock(middle);
+    height: 100%;
+  }
+}
+
+.contacts {
+  @include inlineblock(middle);
+  position: relative;
+}
+
+.contacts__icon {
+  @include phones {
+    display: inline-block;
+  }
+  cursor: pointer;
+  display: none;
+  width: 50px;
+  height: 50px;
+  background: url(../img/decor/phone.png) center no-repeat;
+}
+
+.contacts__icon-active {
+  background: url(../img/decor/phone-red.png) center no-repeat;
+}
+
+.contacts__link {
+  @include phones {
+    display: none;
+  }
+  @include fira(medium);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  color: $blue;
+  background: url(../img/decor/dot.png) 0 bottom repeat-x;
+}
+
+.contacts__link-active {
+  color: $red;
+  background: url(../img/decor/dot-red.png) 0 bottom repeat-x;
+}
+
+.contacts__dropdown {
+  display: none;
+  @include border-radius(5px);
+  @include box-shadow(0 1px 3px rgba(0, 0, 0, .3));
+  position: absolute;
+  width: rem(265px);
+  background: #fff;
+  color: $grey;
+  text-align: left;
+  right: 0;
+  top: 20%;
+  margin-top: rem(30px);
+  margin-left: rem(-132px);
+  z-index: 1;
+
+  .fa {
+    color: $blue;
+    margin-right: 10px;
+  }
+}
+
+.contacts__dropdown-active {
+  display: block;
+}
+
+.contacts__dropdown-item {
+  padding: 10px 20px;
+  border-bottom: 1px solid #eeeeee;
+}

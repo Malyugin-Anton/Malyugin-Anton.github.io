@@ -1,0 +1,74 @@
+.wrapper_auth {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+
+	&:after {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+	}
+}
+
+.auth {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  background: #fff;
+  width: rem(300px);
+  text-align: center;
+  @include border-radius(20px);
+  @include box-shadow(0 1px 2px rgba(00, 00, 00, .3));
+}
+
+.auth__avatar {
+  position: absolute;
+  overflow: hidden;
+  width: rem(140px);
+  height: rem(140px);
+  left: 50%;
+  margin-top: rem(-75px);
+  margin-left: rem(-75px);
+  border: 2px solid #bfbfbf;
+  @include border-radius(50%);
+  display: block;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.auth__wrapper {
+  padding-top: rem(90px);
+}
+
+.auth__name {
+  padding: 0 rem(70px);
+  font-size: 21px;
+  color: $black;
+  margin-bottom: 20px;
+}
+
+.auth__btn {
+  background: $blue;
+  padding: rem(20px) 0;
+}
+
+.auth__link {
+	display: inline-block;
+  border: 3px solid #fff;
+  padding: rem(10px) rem(15px);
+  @include border-radius(50px);
+	color: #fff;
+	transition: all .5s;
+
+	&:hover {
+		background: #fff;
+		color: $blue;
+	}
+}

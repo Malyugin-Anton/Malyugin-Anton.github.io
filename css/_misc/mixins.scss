@@ -1,0 +1,59 @@
+@mixin box-shadow($params) {
+  box-shadow: $params;
+  -webkit-box-shadow: $params;
+  -moz-box-shadow: $params;
+}
+
+@mixin border-radius($params) {
+  border-radius: $params;
+  -webkit-border-radius: $params;
+  -moz-border-radius: $params;
+}
+
+%clearfix  {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin inlineblock($valign: top) {
+  display: inline-block;
+  vertical-align: $valign;
+}
+
+@function rem($px) {
+	@return $px / $font-size + 0rem;
+}
+
+
+//responsive
+
+//ДЛЯ БОЛЬШИХ ЭКРАНОВ
+@mixin desktop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+//ДЛЯ СРЕДНИХ ЭКРАНОВ
+@mixin laptop {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+//ДЛЯ ПЛАНШЕТОВ
+@mixin tablets {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+//ДЛЯ ТЕЛЕФОНОВ
+@mixin phones {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}

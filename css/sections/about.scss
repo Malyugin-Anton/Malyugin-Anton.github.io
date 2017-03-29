@@ -1,0 +1,53 @@
+.about__left {
+  @include phones {
+    clear: both;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  width: 25%;
+  float: left;
+}
+
+.about__right {
+  @include phones {
+    clear: both;
+    width: 100%;
+  }
+  width: 60%;
+  float: right;
+}
+
+.about__pic {
+  @include tablets {
+    width: rem(180px);
+    height: rem(180px);
+  }
+  @include phones {
+    margin: 0 auto;
+  }
+  width: rem(220px);
+  height: rem(220px);
+  overflow: hidden;
+  @include border-radius(50%);
+  border: 5px solid #fff;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.about__desc {
+  @include phones {
+    padding: 0 5px;
+  }
+  @include fira(light);
+  color: $black;
+  line-height: 1.6;
+}
+
+.about__link {
+  text-decoration: underline;
+  color: $black;
+  font-weight: bold;
+}
